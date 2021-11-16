@@ -61,6 +61,10 @@ def playerTurn(ballCount):
     elif ballsTaken> ballCount/2:
         if ballCount==1:
             ballsTaken=1
+        elif ballCount==2:
+            print("Must take one.")
+            ballsTaken=1
+            
         else:
             ballsTaken= int(input("Cannot take more than half. How many balls do you wish to take?"))
     return ballsTaken
@@ -69,6 +73,8 @@ def playerTurn(ballCount):
 def computerStupid(ballCount):
     if ballCount==1:
         ballsTaken=1
+    elif ballCount==2:
+         ballsTaken=1
     else:
         ballsTaken= randint(1, ballCount//2)
     return ballsTaken
@@ -87,7 +93,9 @@ def computerSmart(ballCount):
     else:
         if ballCount==1:
             ballsTaken=1
-        elif ballCount==63 or ballCount==31 or ballCount==15 or ballCount==7 or ballCount==3:
+        elif ballCount==2:
+            ballsTaken=1
+        else:
             ballsTaken= randint(1, ballCount//2)
     return ballsTaken
     
