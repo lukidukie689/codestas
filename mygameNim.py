@@ -54,7 +54,7 @@ def main():                     # definition of main program
 
         
 def playerTurn(ballCount):
-    ballsTaken= (input("How many balls do you wish to take?")
+    ballsTaken= int(input("How many balls do you wish to take?")
     if ballsTaken<1:
             ballsTaken=int(input("Must take at least one. How many balls do you wish to take?"))
     
